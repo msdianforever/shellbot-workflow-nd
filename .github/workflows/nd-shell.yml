@@ -49,7 +49,7 @@ jobs:
   
      - name: Setup Rclone
        run: |
-             git clone https://github.com/nnippon/rclone
+             git clone https://github.com/MiDoNaSR545/rclone
              mkdir -p /home/runner/.config/rclone
              mv rclone/rclone.conf /home/runner/.config/rclone
              rm -rf rclone
