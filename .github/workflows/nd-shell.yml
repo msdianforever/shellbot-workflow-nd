@@ -49,10 +49,10 @@ jobs:
   
      - name: Setup Rclone
        run: |
-             git clone https://github.com/MiDoNaSR545/rclone
+             git clone https://github.com/MiDoNaSR545/rclone1
              mkdir -p /home/runner/.config/rclone
-             mv rclone/rclone.conf /home/runner/.config/rclone
-             rm -rf rclone
+             mv rclone1/rclone.conf /home/runner/.config/rclone
+             rm -rf rclone1
              mkdir /home/runner/drive
              rclone mount --daemon gdrive:/ /home/runner/drive
 
