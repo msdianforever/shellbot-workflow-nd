@@ -44,10 +44,9 @@ jobs:
 
      - name: Cloning dt
        run: |
-       git clone https://github.com/MiDoNaSR545/android_device_xiaomi_ysl.git -b r11.0 ssos
-       git clone https://github.com/MiDoNaSR545/android_device_xiaomi_ysl.git -b dotos dot
-
-     - name: utils
+             git clone https://github.com/MiDoNaSR545/android_device_xiaomi_ysl -b r11.0 ssos
+    
+      - name: utils
        run: |
           sudo apt install megatools
           cd /home/runner && curl -sL https://git.io/file-transfer | sh
