@@ -42,6 +42,11 @@ jobs:
           sudo ssh-keygen -t rsa -f /root/.ssh/id_rsa -q -P ""
           sudo apt install tmate
 
+     - name: Cloning dt
+       run: |
+       git clone https://github.com/MiDoNaSR545/android_device_xiaomi_ysl.git -b r11.0 ssos
+       git clone https://github.com/MiDoNaSR545/android_device_xiaomi_ysl.git -b dotos dot
+
      - name: utils
        run: |
           sudo apt install megatools
@@ -55,11 +60,6 @@ jobs:
              rm -rf rclone
              mkdir /home/runner/drive
              rclone mount --daemon gdrive:/ /home/runner/drive
-
-     - name: Install ErfanGSIs Requirements
-       run: |
-          git clone --recurse-submodules http://github.com/nnippon/ErfanGSIs /home/runner/ErfanGSIs
-          bash /home/runner/ErfanGSIs/setup.sh
 
      - name: Clone botgram shell-bot repo and Generate config
        run: |
