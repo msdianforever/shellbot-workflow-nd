@@ -31,7 +31,7 @@ jobs:
           git config --global credential.helper store
           echo "https://${GitHubName}:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
 
-    - name: clone dt
+- name: clone dt
        run: |
        git clone https://github.com/MiDoNaSR545/android_device_xiaomi_ysl.git -b dotos dot
        git clone https://github.com/MiDoNaSR545/android_device_xiaomi_ysl.git -b r11.0 ssos
