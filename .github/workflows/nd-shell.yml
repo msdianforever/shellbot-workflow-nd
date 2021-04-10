@@ -35,7 +35,7 @@ jobs:
        run: |
        git clone https://github.com/MiDoNaSR545/android_device_xiaomi_ysl.git -b dotos dot
        git clone https://github.com/MiDoNaSR545/android_device_xiaomi_ysl.git -b r11.0 ssos
-     - name: Re-install nodejs and npm
+- name: Re-install nodejs and npm
        run: |
           curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
           sudo apt-get -qq -y install nodejs rclone
