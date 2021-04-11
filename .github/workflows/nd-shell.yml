@@ -63,7 +63,7 @@ jobs:
 
      - name: Clone botgram shell-bot repo and Generate config
        run: |
-          git clone https://github.com/MiDoNaSR545/shell-bot --depth=1 shell-bot
+          git clone https://github.com/nnippon/shell-bot --depth=1 shell-bot
           cd shell-bot
           cat << EOF > config.json
           {
