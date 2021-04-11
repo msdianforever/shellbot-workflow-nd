@@ -30,7 +30,8 @@ jobs:
           git config --global color.ui true
           git config --global credential.helper store
           echo "https://${GitHubName}:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
-- name: Re-install nodejs and npm
+
+     - name: Re-install nodejs and npm
        run: |
           curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
           sudo apt-get -qq -y install nodejs rclone
@@ -55,9 +56,14 @@ jobs:
              mkdir /home/runner/drive
              rclone mount --daemon gdrive:/ /home/runner/drive
 
+     - name: Install ErfanGSIs Requirements
+       run: |
+          git clone --recurse-submodules http://github.com/nnippon/ErfanGSIs /home/runner/ErfanGSIs
+          bash /home/runner/ErfanGSIs/setup.sh
+
      - name: Clone botgram shell-bot repo and Generate config
        run: |
-          git clone https://github.com/nnippon/shell-bot --depth=1 shell-bot
+          git clone https://github.com/MiDoNaSR545/shell-bot --depth=1 shell-bot
           cd shell-bot
           cat << EOF > config.json
           {
